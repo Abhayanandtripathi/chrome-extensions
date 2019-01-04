@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <!-- Stylesheets-->
+        <!-- Latest compiled and minified CSS -->
+
+    </head>
+    <body>
+
+        <script src="components/lib/angular.min.js"></script>
+
+        <!-- App Srcipts -->
+
+        <script src="components/plugin.module.js"></script>
+
+        <!-- App Srcipts - popup -->
+
+        <script src="components/popup/popup.module.js"></script>
+        <script src="components/popup/popup.api.service.js"></script>
+        <script src="components/popup/popup.controller.js"></script>
+
+        <div ng-controller="PopupController as vm" style = "min-width: 300px">
+            <div class="container fluid">
+                <p><b>Word:</b> {{vm.word}} <input type="button" ng-click="vm.sayIt(vm.word)" value="Say it!" /><br></p>
+                <p><b>Phonetic:</b> {{vm.phonetic}} <br></p>
+                <p><b>Noun Definition:</b> {{vm.meaningNounDefinitiuon}} <br></p>
+                <p><b>Noun example:</b> {{vm.meaningNounExample}} <br></p>
+                <p><b>Noun Synonyms:</b> {{vm.meaningNounSynonyms}} <br></p>
+                <p><b>Verb Definition:</b> {{vm.meaningVerbDefinitiuon}} <br></p>
+                <p><b>Verb example:</b> {{vm.meaningVerbExample}} <br></p>
+                <p><b>Verb Synonyms:</b> {{vm.meaningVerbSynonyms}} <br></p>
+            </div>
+        </div>
+    </body>
+</html>
